@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조 생성</title>
+  <link rel="stylesheet" href="create.css" />
+</head>
+
+<body>
+  <section class="create-box">
+    <div class="create-header">
+      <!-- 뒤로가기: history.back() 대신 home.html로 직접 이동 -->
+      <button class="back-button" onclick="goHome()">←</button>
+      <span class="title">조 생성</span>
+    </div>
+
+    <form class="create-form" onsubmit="goSuccess(event)">
+      <div class="radio-group">
+        <span>조 생성</span>
+        <label><input type="radio" name="type" value="dev" required /> 개발</label>
+        <label><input type="radio" name="type" value="general" /> 일반</label>
+      </div>
+
+      <div class="input-group">
+        <label for="total">인원 수</label>
+        <input type="number" id="total" name="total" required />
+      </div>
+
+      <div class="input-group">
+        <label><input type="radio" name="mode" value="count" required /> 조 갯수</label>
+        <input type="number" name="count" />
+      </div>
+
+      <div class="input-group">
+        <label><input type="radio" name="mode" value="people" /> 조 인원 수</label>
+        <input type="number" name="people" />
+      </div>
+
+      <button type="submit" class="submit-btn">생성하기</button>
+    </form>
+
+    <img class="puzzle-icon" src="assets/puzzle.png" alt="퍼즐 아이콘" />
+  </section>
+
+  <script src="create.js">
+    function goHome() {
+      window.location.href = "home.html";
+    }
+
+    function goSuccess(event) {
+      event.preventDefault(); // 폼 제출 막기
+      window.location.href = "success.html";
+    }
+  </script>
+</body>
+
+</html>

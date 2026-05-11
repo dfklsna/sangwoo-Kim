@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>생성 완료</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+
+<body>
+  <div class="success-container">
+    <div class="success-box">
+      <p class="message">팀 생성이 완료되었습니다</p>
+
+      <div class="field">
+        <label>링크</label>
+        <div class="copy-box">
+          <input type="text" readonly id="team-link" />
+          <button onclick="copyText(this)">📋</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>방코드</label>
+        <div class="copy-box">
+          <input type="text" readonly id="room-code" />
+          <button onclick="copyText(this)">📋</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>비밀번호</label>
+        <div class="copy-box">
+          <input type="text" readonly id="room-password" />
+          <button onclick="copyText(this)">📋</button>
+        </div>
+      </div>
+
+      <button class="home-btn" onclick="goHome()">완료</button>
+    </div>
+  </div>
+
+  <script src="success.js"></script>
+</body>
+
+</html>

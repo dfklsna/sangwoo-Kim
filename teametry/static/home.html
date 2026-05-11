@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teametry</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="logo">Teametry</h1>
+
+    <div class="button-group">
+      <!-- 조 생성 -->
+      <div class="puzzle-button" onclick="goCreate()">
+        <img src="assets/create.svg" alt="조 생성" />
+      </div>
+
+      <!-- 조 목록 -->
+      <div class="puzzle-button" onclick="startListFlow()">
+        <img src="assets/list.svg" alt="조 목록" />
+      </div>
+
+      <!-- 참가 -->
+      <div class="puzzle-button" onclick="startJoinFlow()">
+        <img src="assets/join.svg" alt="참가" />
+      </div>
+    </div>
+  </div>
+
+  <!-- 퍼즐 이미지 -->
+  <img src="assets/bg-puzzle1.png" alt="퍼즐 왼쪽 상단" class="bg-puzzle puzzle-1" />
+  <img src="assets/bg-puzzle2.png" alt="퍼즐 오른쪽 상단" class="bg-puzzle puzzle-2" />
+  <img src="assets/bg-puzzle3.png" alt="퍼즐 왼쪽 하단" class="bg-puzzle puzzle-3" />
+  <img src="assets/bg-puzzle4.png" alt="퍼즐 오른쪽 하단" class="bg-puzzle puzzle-4" />
+
+  <!-- ✅ 모달창: 방 코드 입력 -->
+  <div id="room-code-box" class="modal-box hidden">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <input type="text" placeholder="방 코드를 입력하세요" id="roomCodeInput" />
+    <button onclick="submitRoomCode()">확인</button>
+  </div>
+
+  <!-- ✅ 모달창: 비밀번호 입력 -->
+  <div id="password-box" class="modal-box hidden">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <input type="password" placeholder="비밀번호를 입력하세요" id="passwordInput" />
+    <button onclick="goToResult()">확인</button>
+  </div>
+
+  <!-- ✅ 모달 배경 (dim 처리용) -->
+  <div id="modal-backdrop" class="modal-backdrop hidden" onclick="closeModal()"></div>
+
+  <script src="home.js"></script>
+</body>
+
+</html>

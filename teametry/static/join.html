@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>팀 참여하기</title>
+  <link rel="stylesheet" href="join.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="header">← 팀 참여하기</h2>
+    
+    <!-- ✅ JS 없이 이동: action 사용 -->
+    <form class="form" action="survey.html" method="get">
+      <div class="input-group">
+        <label>이름</label>
+        <input type="text" placeholder="이름을 입력하세요" required />
+      </div>
+      <div class="input-group">
+        <label>학번</label>
+        <input type="text" placeholder="학번을 입력하세요" required />
+      </div>
+      <div class="input-group">
+        <label>전화번호</label>
+        <input type="text" placeholder="전화번호를 입력하세요" required />
+      </div>
+      <div class="input-group">
+        <label>이메일</label>
+        <input type="email" placeholder="이메일을 입력하세요" required />
+      </div>
+
+      <div class="radio-group">
+        <label>조장 선호 여부</label>
+        <div>
+          <input type="radio" name="leader" id="yes" required />
+          <label for="yes">예</label>
+          <input type="radio" name="leader" id="no" />
+          <label for="no">아니요</label>
+        </div>
+      </div>
+
+      <div class="radio-group">
+        <label>선호 역할</label>
+        <div>
+          <input type="radio" name="role" id="back" required />
+          <label for="back">백엔드</label>
+          <input type="radio" name="role" id="front" />
+          <label for="front">프론트</label>
+          <input type="radio" name="role" id="none" />
+          <label for="none">없음</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">다음</button>
+    </form>
+
+    <img src="assets/bg-puzzle1.png" class="puzzle-img" alt="퍼즐 이미지" />
+  </div>
+</body>
+
+</html>

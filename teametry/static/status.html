@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조 생성</title>
+  <link rel="stylesheet" href="status.css" />
+</head>
+
+<body>
+  <div class="main-box">
+    <!-- 왼쪽: 참여율 -->
+    <div class="circle-box">
+      <div class="circle">
+        <div class="circle-text">
+          <p id="progress-count">0/0</p>
+          <p id="progress-percent">0%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 오른쪽: 명단 + 버튼 -->
+    <div class="right-panel">
+      <div class="member-list" id="member-list">
+        <!-- JS로 참여자 목록 삽입 -->
+      </div>
+      <button class="status-btn" id="create-btn">생성하기</button>
+    </div>
+  </div>
+
+  <script src="status.js"></script>
+</body>
+
+</html>
