@@ -1,0 +1,107 @@
+/* === 기본 설정 === */
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f3f6fc;
+
+  background-image:
+    url('assets/bg-puzzle1.png'),
+    url('assets/bg-puzzle2.png'),
+    url('assets/bg-puzzle3.png'),
+    url('assets/bg-puzzle4.png');
+
+  background-repeat: no-repeat;
+  background-size: 200px, 200px, 200px, 200px;
+  background-position:
+    20px 20px,
+    calc(100% - 220px) 30px,
+    30px calc(100% - 220px),
+    calc(100% - 200px) calc(100% - 200px);
+}
+
+/* === 전체 화면 중앙 배치 === */
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* === 카드 박스 === */
+.success-box {
+  background-color: white;
+  padding: 40px;
+  border: 2px solid #dce7f8;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* === 안내 메시지 === */
+.message {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* === 필드 그룹 === */
+.field {
+  margin-bottom: 20px;
+}
+
+/* === 입력창과 복사 버튼 묶음 === */
+.copy-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.copy-box input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #0f172a;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #0f172a;
+  background-color: #f9fafb;
+}
+
+.copy-box button {
+  background: #0f172a;
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.copy-box button:hover {
+  background: #1e40af;
+}
+
+/* ✅ 홈으로 가기 버튼 추가 */
+.home-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.home-btn:hover {
+  background-color: #1e40af;
+}

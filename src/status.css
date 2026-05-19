@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f6fc;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .main-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #f9f9f9;
+    border: 8px solid #e5efff;
+    border-radius: 20px;
+    padding: 60px;
+    margin: 60px auto;
+    max-width: 900px;
+    box-sizing: border-box;
+  }
+  
+  .circle-box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle {
+    width: 220px;
+    height: 220px;
+    border: 30px solid #3b82f6;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle-text {
+    text-align: center;
+    color: #3b82f6;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* ✅ 버튼과 리스트를 오른쪽 정렬 */
+    gap: 16px;
+    flex: 1;
+  }
+  
+  /* 💡 명단이 많을 때 스크롤 */
+  .member-list {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 180px; 
+    min-width: 180px;
+    max-height: 320px;   /* ✅ 최대 높이 설정 */
+    overflow-y: auto;    /* ✅ 넘칠 경우 스크롤 생성 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  
+  .status-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .status-btn:hover {
+    background-color: #2563eb;
+  }
+
+/* ===== 모달/폼/버튼 스타일 ===== */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+  background: rgba(34, 40, 56, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 36px 28px 36px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 270px;
+  gap: 18px;
+}
+
+.modal-form label {
+  font-size: 18px;
+  color: #222831;
+  font-weight: 600;
+}
+
+.modal-form input[type="password"] {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.modal-form button {
+  padding: 12px 0;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+.modal-form button:hover {
+  background: #2563eb;
+}

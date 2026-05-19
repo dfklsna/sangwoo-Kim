@@ -1,0 +1,119 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #e5f0ff;
+  margin: 0;
+  /* flex 중앙정렬 전부 제거! */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 16px 40px 32px 40px; /* 위, 아래 여백 축소 */
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin: 40px auto 40px auto;  /* 상단/하단 40px 여백 + 좌우 중앙정렬 */
+}
+
+
+.header {
+  color: #0f3a5c;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;  /* 30px → 16px */
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* 18px → 14px */
+  align-items: center;
+}
+
+
+/* ✅ input 그룹 (라벨 왼쪽 위 정렬) */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* ✅ 라벨 왼쪽 정렬 */
+  width: 100%;
+  max-width: 350px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #0f3a5c;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #aaccee;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ✅ 라디오 그룹 (왼쪽 정렬) */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ 라벨 왼쪽 정렬 */
+  width: 100%;
+  max-width: 350px;
+  gap: 8px;
+}
+
+.radio-group > label {
+  color: #0f3a5c;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.radio-group div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* ✅ 제출 버튼 */
+.submit-btn {
+  background-color: #397ef6;
+  color: white;
+  font-size: 16px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* ✅ 퍼즐 이미지 고정 */
+.puzzle-img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+}
+
+.container_a {
+  background-color: white;
+  padding: 16px 40px 32px 40px; /* 위, 아래 여백 축소 */
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin: 40px auto 40px auto;  /* 상단/하단 40px 여백 + 좌우 중앙정렬 */
+}

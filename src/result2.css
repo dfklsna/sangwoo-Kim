@@ -1,0 +1,143 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background-color: #f0f4fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+    background-image:
+    url('assets/bg-puzzle10.png'),
+    url('assets/bg-puzzle11.png'),
+    url('assets/bg-puzzle8.png'),
+    url('assets/bg-puzzle9.png');
+  background-repeat: no-repeat;
+  background-size: 200px, 200px, 200px, 200px;
+  background-position:
+    20px 20px,
+    calc(100% - 220px) 30px,
+    30px calc(100% - 220px),
+    calc(100% - 200px) calc(100% - 200px);
+}
+
+.container_b{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-box {
+  background-color: white;
+  border: 4px solid #d3e9ff;
+  border-radius: 15px;
+  padding: 40px 48px 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  margin: 0 auto;
+}
+
+h2 {
+  color: #0f3a5c;
+  margin-bottom: 28px;
+  margin-top: 0;
+  text-align: center;
+}
+
+
+.team-box ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.team-box li {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #0f3a5c;
+}
+
+.member {
+  background: none;
+  border: none;
+  color: #0f3a5c;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.leader-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: #ff9900;
+}
+
+.name-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone {
+  font-size: 16px;
+  color: #333;
+}
+
+.email {
+  font-size: 15px;
+  color: #555;
+  margin-left: 2px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border: 2px solid #aaa;
+  width: 320px;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease, popUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}

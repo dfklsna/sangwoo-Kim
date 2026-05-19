@@ -1,0 +1,200 @@
+
+/* 전체 페이지 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #e5f0ff;
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  background-image:
+    url('assets/bg-puzzle10.png'),
+    url('assets/bg-puzzle11.png'),
+    url('assets/bg-puzzle8.png'),
+    url('assets/bg-puzzle9.png');
+  background-repeat: no-repeat;
+  background-size: 200px, 200px, 200px, 200px;
+  background-position:
+    20px 20px,
+    calc(100% - 220px) 30px,
+    30px calc(100% - 220px),
+    calc(100% - 200px) calc(100% - 200px);
+}
+
+/* 전체 설문 컨테이너 */
+.survey-container {
+  background-color: white;
+  padding: 30px 40px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(81, 36, 180, 0.05);
+  margin: 40px 0 40px 60px; /* ✅ 왼쪽 정렬로 여백 설정 (auto 제거) */
+}
+
+/* 각 문항 컨테이너 */
+.question {
+  margin-bottom: 60px;
+  text-align: left; /* ✅ 질문 텍스트와 라디오 버튼 왼쪽 정렬 */
+}
+
+
+/* 타이틀 텍스트 */
+.survey-container h2,
+.survey-container h3 {
+  color: #0f3a5c;
+  margin-bottom: 20px;
+}
+
+
+.question-scroll-area {
+  max-height: 70vh; /* 필요시 60~80vh 사이로 조절 */
+  overflow-y: auto;
+  padding-right: 2px; /* (선택) 스크롤바 겹침 방지용 */
+}
+
+/* 문항 텍스트 */
+.question label {
+  display: block;
+  font-weight: bold;
+  color: #0f3a5c;
+  margin-bottom: 10px;
+}
+
+/* 버튼 영역: 원, 좌우 텍스트 포함 */
+.options {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+/* 기본 라디오 버튼 숨기기 */
+.options input[type="radio"] {
+  display: none;
+}
+
+/* 원형 라벨 스타일 공통 */
+.options label {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  background-color: transparent;
+}
+
+/* 버튼별 크기 및 테두리 색상 */
+.option-1 {
+  width: 40px; height: 40px;
+  border: 2px solid #0a3d62;
+}
+.option-2 {
+  width: 36px; height: 36px;
+  border: 2px solid #3c6382;
+}
+.option-3 {
+  width: 32px; height: 32px;
+  border: 2px solid #7f8c8d;
+}
+.option-4 {
+  width: 36px; height: 36px;
+  border: 2px solid #6c5ce7;
+}
+.option-5 {
+  width: 40px; height: 40px;
+  border: 2px solid #341f97;
+}
+
+/* 선택 시 배경색 채우기 */
+input[type="radio"]:checked + label.option-1 {
+  background-color: #0a3d62;
+}
+input[type="radio"]:checked + label.option-2 {
+  background-color: #3c6382;
+}
+input[type="radio"]:checked + label.option-3 {
+  background-color: #7f8c8d;
+}
+input[type="radio"]:checked + label.option-4 {
+  background-color: #6c5ce7;
+}
+input[type="radio"]:checked + label.option-5 {
+  background-color: #341f97;
+}
+
+/* 숫자 삽입 */
+.option-1::after {
+  content: "1";
+  color: #0a3d62;
+}
+.option-2::after {
+  content: "2";
+  color: #3c6382;
+}
+.option-3::after {
+  content: "3";
+  color: #7f8c8d;
+}
+.option-4::after {
+  content: "4";
+  color: #6c5ce7;
+}
+.option-5::after {
+  content: "5";
+  color: #341f97;
+}
+
+/* 숫자를 중앙에 배치 */
+.options label::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+
+/* 왼쪽 텍스트 (매우 아니다) */
+.options::before {
+  content: "매우 아니다";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #0a3d62;
+}
+
+/* 오른쪽 텍스트 (매우 그렇다) */
+.options::after {
+  content: "매우 그렇다";
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #341f97;
+}
+
+/* 제출 버튼 스타일 */
+.submit-btn {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #397ef6;
+  color: white;
+  font-size: 16px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.submit-btn:hover {
+  background-color: #2f68d3;
+}

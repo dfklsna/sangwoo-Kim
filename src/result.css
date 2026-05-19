@@ -1,0 +1,61 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f3f9;
+    margin: 0;
+    padding: 30px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 304px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 24px;  /* h2와 버튼 사이 */
+  }
+
+  
+  .team-board {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .team-column {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    flex: 1;
+    min-height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 2px dashed transparent;
+    transition: border 0.2s;
+  }
+  
+  .team-column.drag-over {
+    border-color: #3c82f6;
+  }
+  
+  .team-column h3 {
+    color: #0f3a5c;
+    margin-bottom: 15px;
+  }
+  
+  .member {
+    background-color: #eef3ff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: grab;
+    transition: background-color 0.2s;
+  }
+  
+  .member:active {
+    cursor: grabbing;
+    background-color: #cddfff;
+  }
+  
